@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import {legacyPlugin} from '@web/dev-server-legacy';
-import {playwrightLauncher} from '@web/test-runner-playwright';
+import { legacyPlugin } from '@web/dev-server-legacy';
+import { playwrightLauncher } from '@web/test-runner-playwright';
 
 const mode = process.env.MODE || 'dev';
 if (!['dev', 'prod'].includes(mode)) {
@@ -41,7 +41,7 @@ if (!['dev', 'prod'].includes(mode)) {
 //   capabilities: {
 //     'browserstack.user': process.env.BROWSER_STACK_USERNAME,
 //     'browserstack.key': process.env.BROWSER_STACK_ACCESS_KEY,
-//     project: 'my-element',
+//     project: 'arcgis-js-api-calcite-lit-example',
 //     name: 'unit tests',
 //     build: `${process.env.GITHUB_REF ?? 'local'} build ${
 //       process.env.GITHUB_RUN_NUMBER ?? ''
@@ -53,9 +53,9 @@ if (!['dev', 'prod'].includes(mode)) {
 const browsers = {
   // Local browser testing via playwright
   // ===========
-  chromium: playwrightLauncher({product: 'chromium'}),
-  firefox: playwrightLauncher({product: 'firefox'}),
-  webkit: playwrightLauncher({product: 'webkit'}),
+  chromium: playwrightLauncher({ product: 'chromium' }),
+  firefox: playwrightLauncher({ product: 'firefox' }),
+  webkit: playwrightLauncher({ product: 'webkit' }),
 
   // Uncomment example launchers for running on Sauce Labs
   // ===========
@@ -88,7 +88,7 @@ try {
 export default {
   rootDir: '.',
   files: ['./test/**/*_test.js'],
-  nodeResolve: {exportConditions: mode === 'dev' ? ['development'] : []},
+  nodeResolve: { exportConditions: mode === 'dev' ? ['development'] : [] },
   preserveSymlinks: true,
   browsers: commandLineBrowsers ?? Object.values(browsers),
   testFramework: {

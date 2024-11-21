@@ -1,15 +1,17 @@
 ---
 layout: example.11ty.cjs
-title: <my-element> ⌲ Examples ⌲ Name Property
+title: <arcgis-js-api-calcite-lit-example> ⌲ Examples ⌲ Name Property
 tags: example
 name: Name Property
 description: Setting the name property
 ---
 
-<my-element name="Earth"></my-element>
+<arcgis-js-api-calcite-lit-example name="Earth"></arcgis-js-api-calcite-lit-example>
 
 <h3>HTML</h3>
 
 ```html
-<my-element name="Earth"></my-element>
+<arcgis-js-api-calcite-lit-example
+  name="Earth"
+></arcgis-js-api-calcite-lit-example>
 ```

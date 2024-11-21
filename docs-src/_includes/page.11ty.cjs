@@ -4,7 +4,7 @@ const nav = require('./nav.11ty.cjs');
 const relative = require('./relative-path.cjs');
 
 module.exports = function (data) {
-  const {title, page, content} = data;
+  const { title, page, content } = data;
   return `
 <!doctype html>
 
@@ -19,9 +19,9 @@ module.exports = function (data) {
     <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="/node_modules/lit/polyfill-support.js"></script>
     <script type="module" src="${relative(
-      page.url,
-      '/my-element.bundled.js'
-    )}"></script>
+    page.url,
+    '/arcgis-js-api-calcite-lit-example.bundled.js'
+  )}"></script>
   </head>
   <body>
     ${header()}
