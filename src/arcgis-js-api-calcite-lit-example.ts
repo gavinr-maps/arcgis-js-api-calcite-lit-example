@@ -9,7 +9,7 @@ import {customElement, property, query} from 'lit/decorators.js';
 
 import '@arcgis/map-components/dist/components/arcgis-map';
 import '@arcgis/map-components/dist/components/arcgis-legend';
-import {ArcgisMap} from '@arcgis/map-components/dist/components/arcgis-map';
+import type {ArcgisMap} from '@arcgis/map-components/dist/components/arcgis-map';
 
 @customElement('arcgis-js-api-calcite-lit-example')
 export class ArcGISJSAPICalciteLitExample extends LitElement {
