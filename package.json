@@ -1,6 +1,5 @@
 {
   "name": "arcgis-js-api-calcite-lit-example",
-  "private": true,
   "version": "2.0.2",
   "description": "An example web component that includes the ArcGIS Maps SDK for JavaScript and ArcGIS Calcite Components",
   "main": "arcgis-js-api-calcite-lit-example.js",

@@ -10,6 +10,7 @@ import {customElement, property, query} from 'lit/decorators.js';
 import '@arcgis/map-components/dist/components/arcgis-map';
 import '@arcgis/map-components/dist/components/arcgis-legend';
 import {ArcgisMap} from '@arcgis/map-components/dist/components/arcgis-map';
+import {ArcgisLegend} from '@arcgis/map-components/dist/components/arcgis-legend';
 
 @customElement('arcgis-js-api-calcite-lit-example')
 export class ArcGISJSAPICalciteLitExample extends LitElement {
@@ -38,6 +39,9 @@ export class ArcGISJSAPICalciteLitExample extends LitElement {
 
   @property({type: Array})
   center = [0.0, 0.0];
+
+  @property({type: Number})
+  zoom = 2;
 
   @query('#centerInputBox')
   centerInputBox!: HTMLInputElement;
@@ -86,9 +90,10 @@ export class ArcGISJSAPICalciteLitExample extends LitElement {
       />
 
       <arcgis-map
-        item-id="e691172598f04ea8881cd2a4adaa45ba"
+        basemap="topo-vector"
         @arcgisViewChange=${this.handleArcGISViewChange}
         .center=${this.center}
+        .zoom=${this.zoom}
       >
         <arcgis-legend position="top-right"></arcgis-legend>
       </arcgis-map>
