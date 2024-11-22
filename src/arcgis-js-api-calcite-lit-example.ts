@@ -10,7 +10,6 @@ import {customElement, property, query} from 'lit/decorators.js';
 import '@arcgis/map-components/dist/components/arcgis-map';
 import '@arcgis/map-components/dist/components/arcgis-legend';
 import {ArcgisMap} from '@arcgis/map-components/dist/components/arcgis-map';
-import {ArcgisLegend} from '@arcgis/map-components/dist/components/arcgis-legend';
 
 @customElement('arcgis-js-api-calcite-lit-example')
 export class ArcGISJSAPICalciteLitExample extends LitElement {
@@ -95,7 +94,7 @@ export class ArcGISJSAPICalciteLitExample extends LitElement {
         .center=${this.center}
         .zoom=${this.zoom}
       >
-        <arcgis-legend position="top-right"></arcgis-legend>
+        <!-- <arcgis-legend position="top-right"></arcgis-legend> -->
       </arcgis-map>
 
       <div>
