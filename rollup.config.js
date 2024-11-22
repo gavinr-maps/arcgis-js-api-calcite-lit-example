@@ -14,6 +14,7 @@ export default {
   output: {
     file: 'arcgis-js-api-calcite-lit-example.bundled.js',
     format: 'esm',
+    inlineDynamicImports: true
   },
   onwarn(warning) {
     if (warning.code !== 'THIS_IS_UNDEFINED') {
