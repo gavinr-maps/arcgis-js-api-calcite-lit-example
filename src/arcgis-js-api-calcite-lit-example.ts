@@ -11,15 +11,6 @@ import '@arcgis/map-components/dist/components/arcgis-map';
 import '@arcgis/map-components/dist/components/arcgis-legend';
 import {ArcgisMap} from '@arcgis/map-components/dist/components/arcgis-map';
 
-// import {ArcgisMap} from '@arcgis/map-components/dist/components/arcgis-map';
-
-/**
- * An example element.
- *
- * @fires count-changed - Indicates when the count changes
- * @slot - This element has a slot
- * @csspart button - The button
- */
 @customElement('arcgis-js-api-calcite-lit-example')
 export class ArcGISJSAPICalciteLitExample extends LitElement {
   static override styles = css`
