@@ -11,6 +11,17 @@ import '@arcgis/map-components/dist/components/arcgis-map';
 import '@arcgis/map-components/dist/components/arcgis-legend';
 import type {ArcgisMap} from '@arcgis/map-components/dist/components/arcgis-map';
 
+// Calcite:
+import {setAssetPath} from '@esri/calcite-components/dist/components';
+setAssetPath('https://js.arcgis.com/calcite-components/2.13.2/assets');
+import '@esri/calcite-components/dist/components/calcite-button';
+
+// import {defineCustomElements} from '@esri/calcite-components/dist/loader';
+// // CDN hosted assets
+// defineCustomElements(window, {
+//   resourcesUrl: 'https://js.arcgis.com/calcite-components/2.13.2/assets',
+// });
+
 @customElement('arcgis-js-api-calcite-lit-example')
 export class ArcGISJSAPICalciteLitExample extends LitElement {
   static override styles = css`
@@ -87,6 +98,10 @@ export class ArcGISJSAPICalciteLitExample extends LitElement {
         rel="stylesheet"
         href="https://js.arcgis.com/4.31/@arcgis/core/assets/esri/themes/light/main.css"
       />
+      <link
+        rel="stylesheet"
+        href="https://js.arcgis.com/calcite-components/2.13.2/calcite.css"
+      />
 
       <arcgis-map
         basemap="topo-vector"
@@ -100,7 +115,7 @@ export class ArcGISJSAPICalciteLitExample extends LitElement {
       <div>
         ${this.locationLabel}
         <input id="centerInputBox" type="text" .value=${String(this.center)} />
-        <button @click=${this._goToClickHandler} part="button">Go</button>
+        <calcite-button @click=${this._goToClickHandler}>Go</calcite-button>
       </div>
 
       <slot></slot>
