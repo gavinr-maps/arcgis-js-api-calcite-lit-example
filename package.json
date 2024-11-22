@@ -66,5 +66,6 @@
     "rollup-plugin-summary": "^2.0.1",
     "typescript": "~5.5.0"
   },
-  "customElements": "custom-elements.json"
+  "customElements": "custom-elements.json",
+  "homepage": "https://github.com/gavinr-maps/arcgis-js-api-calcite-lit-example#readme"
 }
